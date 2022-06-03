@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="526.0" prefWidth="802.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SatisYapController">
+   <children>
+      <TextField fx:id="txt_tc" layoutX="94.0" layoutY="44.0" promptText="TC Giriniz" style="-fx-background-radius: 10;" />
+      <TextField fx:id="txt_adsoyad" layoutX="94.0" layoutY="81.0" promptText="Ad Soyad Giriniz" style="-fx-background-radius: 10;" />
+      <TextField fx:id="txt_telefon" layoutX="94.0" layoutY="117.0" promptText="Telefon Giriniz" style="-fx-background-radius: 10;" />
+      <TextField fx:id="txt_barkodno" layoutX="388.0" layoutY="38.0" promptText="Barkod No Giriniz" style="-fx-background-radius: 10;" />
+      <TextField fx:id="txt_urunadi" layoutX="388.0" layoutY="75.0" promptText="Ürün Adı Giriniz" style="-fx-background-radius: 10;" />
+      <TextField fx:id="txt_urunadedi" layoutX="388.0" layoutY="108.0" promptText="Ürün Adedi Giriniz" style="-fx-background-radius: 10;" />
+      <TextField fx:id="txt_urunsatisfiyati" layoutX="388.0" layoutY="140.0" promptText="Satış Fiyatı Giriniz" style="-fx-background-radius: 10;" />
+      <TextField fx:id="txt_toplamfiyati" layoutX="388.0" layoutY="173.0" promptText="Toplam Fiyat Giriniz" style="-fx-background-radius: 10;" />
+      <Label layoutX="36.0" layoutY="48.0" text="TC No :" textFill="WHITE" />
+      <Label layoutX="22.0" layoutY="85.0" text="Ad Soyad :" textFill="WHITE" />
+      <Label layoutX="36.0" layoutY="118.0" text="Label" />
+      <Label layoutX="33.0" layoutY="118.0" text="Telefon :" textFill="WHITE" />
+      <Label layoutX="312.0" layoutY="42.0" text="Barkod No :" textFill="WHITE" />
+      <Label layoutX="317.0" layoutY="79.0" text="Ürün Adı :" textFill="WHITE" />
+      <Label layoutX="310.0" layoutY="112.0" text="Ürün Adedi :" textFill="WHITE" />
+      <Label layoutX="283.0" layoutY="144.0" text="Ürün Satış Fiyatı :" textFill="WHITE" />
+      <Label layoutX="300.0" layoutY="177.0" text="Toplam Fiyat :" textFill="WHITE" />
+      <Button fx:id="btn_ekle" layoutX="251.0" layoutY="206.0" mnemonicParsing="false" onAction="#EkleAction" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: #2196f3; -fx-background-radius: 10;" text="EKLE" />
+      <Button fx:id="btn_sil" layoutX="708.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnsil_Action" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: red; -fx-background-radius: 10;" text="SİL" textFill="WHITE" />
+      <Button fx:id="btn_satisyap" layoutX="708.0" layoutY="410.0" mnemonicParsing="false" onAction="#SatisYapAction" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #16ae34; -fx-background-radius: 10;" text="SATIŞ YAP" textFill="WHITE" />
+      <Button fx:id="btn_satisiptal" layoutX="708.0" layoutY="447.0" mnemonicParsing="false" onAction="#SatisiptalAction" style="-fx-background-color: #9e0c0c; -fx-background-radius: 10;" text="SATIŞ İPTAL" textFill="WHITE" />
+      <Label layoutX="344.0" text="SATIŞ YAP" textFill="#2196f3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="250.0" prefHeight="280.0" prefWidth="697.0">
+         <children>
+            <TableView fx:id="tbl_satis" layoutY="-6.0" onMouseClicked="#table_satisyap_c" prefHeight="286.0" prefWidth="698.0">
+              <columns>
+                <TableColumn fx:id="coll_id" prefWidth="40.799986243247986" text="id" />
+                <TableColumn fx:id="coll_barkodno" prefWidth="164.8000144958496" text="barkodno" />
+                  <TableColumn fx:id="coll_urunadi" prefWidth="131.2000274658203" text="urunadi" />
+                  <TableColumn fx:id="coll_miktari" prefWidth="92.00006103515625" text="miktari" />
+                  <TableColumn fx:id="coll_satisfiyati" prefWidth="140.800048828125" text="satisfiyati" />
+                  <TableColumn fx:id="coll_toplamfiyati" prefWidth="133.5999755859375" text="toplamfiyati" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lbl_id" layoutX="463.0" layoutY="210.0" text="Label" />
+      <Button fx:id="btn_guncelle" layoutX="710.0" layoutY="293.0" mnemonicParsing="false" onAction="#btnguncelle_Action" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="GÜNCELLE" />
+      <TextField fx:id="txt_arafield" layoutX="591.0" layoutY="109.0" prefHeight="26.0" prefWidth="161.0" promptText="Aranacak Ürün Adı Giriniz" style="-fx-background-radius: 10;" />
+      <Label layoutX="555.0" layoutY="113.0" text="ARA :" textFill="WHITE" />
+      <Button fx:id="btn_ara" layoutX="641.0" layoutY="152.0" mnemonicParsing="false" onAction="#btnara_Action" prefHeight="26.0" prefWidth="51.0" style="-fx-background-color: #2196f3; -fx-background-radius: 10;" text="ARA" />
+      <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="760.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/search.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

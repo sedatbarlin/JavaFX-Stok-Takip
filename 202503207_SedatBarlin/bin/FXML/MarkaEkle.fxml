@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="526.0" prefWidth="802.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MarkaEkleController">
+   <children>
+      <Label layoutX="108.0" layoutY="92.0" text="Kategori :" textFill="WHITE" />
+      <Label layoutX="121.0" layoutY="130.0" text="Marka :" textFill="WHITE" />
+      <TextField fx:id="txt_marka" layoutX="174.0" layoutY="126.0" prefHeight="26.0" prefWidth="226.0" promptText="Marka Giriniz" style="-fx-background-radius: 10;" />
+      <Button fx:id="btn_ekle" layoutX="174.0" layoutY="171.0" mnemonicParsing="false" onAction="#MarkaEkleAction" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #2196f3; -fx-background-radius: 10;" text="Ekle" />
+      <TableView fx:id="tbl_marka" layoutX="-1.0" layoutY="243.0" onMouseClicked="#table_markaekle_c" prefHeight="282.0" prefWidth="802.0" style="-fx-background-color: grey;">
+        <columns>
+          <TableColumn fx:id="coll_id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="coll_kategori" prefWidth="324.7999496459961" text="kategori" />
+            <TableColumn fx:id="coll_marka" prefWidth="403.2000427246094" text="marka" />
+        </columns>
+      </TableView>
+      <Label layoutX="344.0" text="MARKA EKLE" textFill="#2196f3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_sil" layoutX="250.0" layoutY="171.0" mnemonicParsing="false" onAction="#btnsil_Action" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: red; -fx-background-radius: 10;" text="SİL" textFill="WHITE" />
+      <Label fx:id="lbl_id" layoutX="740.0" layoutY="173.0" text="Label" />
+      <Button fx:id="btn_guncelle" layoutX="328.0" layoutY="172.0" mnemonicParsing="false" onAction="#btnguncelle_Action" style="-fx-background-color: orange; -fx-background-radius: 10;" text="GÜNCELLE" />
+      <TextField fx:id="txt_arafield" layoutX="532.0" layoutY="131.0" prefHeight="26.0" prefWidth="151.0" promptText="Aranacak Markayı Giriniz" style="-fx-background-radius: 10;" />
+      <Label layoutX="496.0" layoutY="135.0" text="ARA :" textFill="WHITE" />
+      <Button fx:id="btn_ara" layoutX="582.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnara_Action" prefHeight="26.0" prefWidth="51.0" style="-fx-background-color: #2196f3; -fx-background-radius: 10;" text="ARA" />
+      <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="690.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/search.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txt_kategori" layoutX="176.0" layoutY="88.0" prefHeight="26.0" prefWidth="226.0" promptText="Kategori Giriniz" style="-fx-background-radius: 10;" />
+ 
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="526.0" prefWidth="802.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SatisListeleController">
+   <children>
+      <TableView fx:id="tbl_satislistele" layoutY="163.0" onMouseClicked="#table_satislistele_c" prefHeight="362.0" prefWidth="802.0">
+        <columns>
+          <TableColumn fx:id="coll_id" prefWidth="32.799986243247986" text="id" />
+          <TableColumn fx:id="coll_tc" prefWidth="105.60001373291016" text="tc" />
+            <TableColumn fx:id="coll_adsoyad" prefWidth="107.19998168945312" text="adsoyad" />
+            <TableColumn fx:id="coll_telefon" prefWidth="91.20001220703125" text="telefon" />
+            <TableColumn fx:id="coll_barkodno" prefWidth="70.39996337890625" text="barkodno" />
+            <TableColumn fx:id="coll_urunadi" prefWidth="99.99993896484375" text="urunadi" />
+            <TableColumn fx:id="coll_miktari" prefWidth="80.00003051757812" text="miktari" />
+            <TableColumn fx:id="coll_satisfiyati" prefWidth="112.800048828125" text="satisfiyati" />
+            <TableColumn fx:id="coll_toplamfiyat" prefWidth="106.4000244140625" text="toplamfiyat" />
+        </columns>
+      </TableView>
+      <Label layoutX="344.0" text="SATIŞLARINIZ" textFill="#2196f3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

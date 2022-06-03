@@ -1,0 +1,18 @@
+.btn_cikis {
+  -fx-transition-duration: 0.4s;
+}
+
+.btn_cikis:hover {
+  -fx-background-color: #b71c1c; /* Green */
+  -fx-color: white;
+}
+
+.btn_girisyap {
+  -fx-transition-duration: 0.4s;
+}
+
+.btn_girisyap:hover {
+  -fx-background-color:  #30e136; /* Green */
+  -fx-color: white;
+}
+
